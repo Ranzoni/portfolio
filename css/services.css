@@ -29,8 +29,12 @@
     margin: 15px 35px 0 15px;
 }
 
-.service:nth-child(even) {
+.service:nth-child(even) h3 {
     text-align: right;
+}
+
+.service:nth-child(even) p {
+    margin-left: 45px;
 }
 
 .service:nth-child(even) img {
