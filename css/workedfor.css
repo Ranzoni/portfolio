@@ -1,0 +1,19 @@
+.company:hover {
+    transform: translateY(-4px);
+}
+
+.company {
+    border-radius: 12px;
+    border: 1px solid #fff;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+    width: 100%;
+    margin-bottom: 15px;
+    color: #fff;
+    background-color: #4D738E;
+}
+
+.company h3 {
+    color: #fff;
+}
