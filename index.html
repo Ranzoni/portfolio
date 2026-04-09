@@ -8,7 +8,9 @@
     
     <link rel="shortcut icon" type="image/x-icon" href="img/code.png" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -22,78 +24,104 @@
   </head>
 
   <body>
-    
-    <script>
-      AOS.init()
-    </script>
-
     <div class="background-div"></div>
+    <div class="background-noise"></div>
     
     <nav>
+      <a class="brand" href="#about">Felipe Borges</a>
       <ul>
-        <li><a href="#">Sobre</a></li>
+        <li><a href="#about">Sobre</a></li>
         <li><a href="#services">Serviços</a></li>
         <li><a href="#workedfor">Experiências</a></li>
         <li><a href="#portfolio">Portfólio</a></li>
         <li><a href="#skills">Tecnologias</a></li>
         <li><a href="#contact">Contato</a></li>
       </ul>
+      <a class="nav-cta" href="#contact">Vamos conversar</a>
     </nav>
     
-    <header>
-      <h2>Desenvolvedor de Software</h2>
+    <header data-aos="fade-up">
+      <p class="hero-kicker">Desenvolvedor de Software Sênior</p>
+      <h1>Soluções web robustas para empresas que precisam de velocidade, estabilidade e resultado.</h1>
+      <p class="hero-lead">Mais de 11 anos criando e evoluindo produtos digitais em diferentes contextos: ERP, integrações, APIs, aplicações web e serviços críticos de negócio.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Solicitar contato</a>
+        <a class="btn btn-ghost" href="#portfolio">Ver projetos</a>
+      </div>
+      <div class="hero-metrics">
+        <article class="metric-card">
+          <h3>11+ anos</h3>
+          <p>de experiência em desenvolvimento de software</p>
+        </article>
+        <article class="metric-card">
+          <h3>6 empresas</h3>
+          <p>com atuação em produtos corporativos e integração</p>
+        </article>
+        <article class="metric-card">
+          <h3>Full-cycle</h3>
+          <p>do backend à entrega de interfaces web responsivas</p>
+        </article>
+      </div>
     </header>
     
     <section id="about" data-aos="fade-up">
-      <img src="img/eu.png" />
-      <h3>Olá,</h3>
-      <p>Me chamo Felipe Ranzoni Borges e atuo como desenvolvedor de software há mais de 11 anos. Tenho paixão por tecnologia e busco constantemente evoluir, aprimorando minhas habilidades e conhecimentos.</p>
-      <br />
-      <p>Ao longo da minha carreira, participei de diversos projetos, como sistemas ERP, serviços de integração, aplicações Web e Desktop. Sou comprometido com resultados e me dedico aos projetos dos quais faço parte, sempre buscando entregar soluções eficientes e de qualidade.</p>
+      <div class="about-grid">
+        <div class="about-photo">
+          <img src="img/eu.png" alt="Foto de Felipe Borges" />
+        </div>
+        <div>
+          <p class="section-kicker">Quem sou eu</p>
+          <h2>Perfil técnico com mentalidade de negócio</h2>
+          <p>Sou Felipe Ranzoni Borges, desenvolvedor de software com foco em soluções empresariais de alta confiabilidade. Atuo com visão de produto, qualidade de código e compromisso com entregas que geram impacto real para clientes e operações.</p>
+          <p>Minha experiência inclui evolução de plataformas existentes, construção de novos módulos, integrações entre sistemas e participação em projetos com inteligência artificial.</p>
+          <ul class="about-highlights">
+            <li>Forte atuação em backend com C#, .NET e ASP.NET.</li>
+            <li>Experiência com bancos relacionais e não relacionais.</li>
+            <li>Capacidade de transitar entre arquitetura, implementação e suporte à operação.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="services" data-aos="fade-up">
-      <h3>Serviços</h3>
+      <p class="section-kicker">Como posso ajudar</p>
+      <h2>Serviços focados em ambientes corporativos</h2>
       <div class="services">
         <div class="service">
           <img src="img/api.png" />
-          <h3>API</h3>
-          
-          <p>Minha especialidade é o desenvolvimento de APIs RESTful. Tenho experiência na criação de back-ends escaláveis, funcionais e bem estruturados, prontos para atender às necessidades da sua aplicação com performance e qualidade.</p>
+          <h3>APIs e backend de missão crítica</h3>
+          <p>Desenvolvimento de APIs RESTful e serviços backend com foco em escalabilidade, segurança e manutenção sustentável.</p>
         </div>
 
         <div class="service">
           <img src="img/website.png" />
-          <h3>Websites estáticos/dinâmicos</h3>
-
-          <p>Se você precisa de um site, portal ou blog para sua aplicação web, posso te ajudar. Tenho experiência no desenvolvimento de interfaces front-end modernas, responsivas e focadas na melhor experiência do usuário.</p>
+          <h3>Aplicações web e interfaces profissionais</h3>
+          <p>Construção e evolução de front-ends modernos, acessíveis e responsivos para sistemas internos, portais e produtos digitais.</p>
         </div>
 
         <div class="service">
           <img src="img/digital-services.png" />
-          <h3>Serviços em background</h3>
-
-          <p>Precisa de serviços de integração, rotinas em segundo plano ou sistemas externos para envio de e-mails? Tenho experiência no desenvolvimento dessas soluções e posso ajudá-lo a implementar serviços robustos e eficientes.</p>
+          <h3>Integrações e automações em background</h3>
+          <p>Implementação de rotinas, jobs e integrações entre plataformas para reduzir retrabalho e aumentar previsibilidade operacional.</p>
         </div>
 
         <div class="service">
           <img src="img/ai.png" />
-          <h3>Inteligência Artificial</h3>
-
-          <p>Atualmente, estou me aprofundando em inteligência artificial e já atuei em um projeto profissional voltado à criação de um chat com IA.</p>
+          <h3>Soluções com inteligência artificial</h3>
+          <p>Experiência prática em projeto profissional de chat com IA e evolução contínua em aplicações orientadas por modelos inteligentes.</p>
         </div>
 
         <div class="service">
           <img src="img/game.png" />
-          <h3>Games</h3>
-
-          <p>Já me aventurei no desenvolvimento de protótipos pessoais de jogos digitais, adquirida por meio de estudos e prática. Isso me permite atuar também nesse tipo de produto com segurança e criatividade.</p>
+          <h3>Prototipação de jogos</h3>
+          <p>Criação de protótipos em Unity para validação de mecânicas, interação e fluxo de gameplay.</p>
         </div>
       </div>
     </section>
 
     <section id="workedfor" data-aos="fade-up">
-      <h3>Experiências Profissionais</h3>
+      <p class="section-kicker">Trajetória</p>
+      <h2>Experiências profissionais</h2>
       <div class="companies">
         <div class="company">
           <h3>Profits Consulting (Atualmente)</h3>
@@ -134,25 +162,55 @@
     </section>
 
     <section id="portfolio" data-aos="fade-up">
-      <h3>Portfólio (Em expansão)</h3>
-      <div id="cards-container" class="cards"></div>
+      <p class="section-kicker">Portfólio</p>
+      <h2>Projetos em destaque</h2>
+
+      <div class="portfolio-group">
+        <div class="portfolio-headline">
+          <h3>Projetos profissionais e técnicos</h3>
+          <p>Soluções com foco em arquitetura, qualidade e resolução de problemas reais de negócio.</p>
+        </div>
+        <div id="cards-business" class="cards"></div>
+      </div>
+
+      <div class="portfolio-group">
+        <div class="portfolio-headline">
+          <h3>Projetos de jogos</h3>
+          <p>Protótipos em Unity para estudo de mecânicas, performance e experiência interativa.</p>
+        </div>
+        <div id="cards-games" class="cards"></div>
+      </div>
     </section>
 
     <section id="skills" data-aos="fade-up">
-      <h3>Tecnologias</h3>
+      <p class="section-kicker">Stack</p>
+      <h2>Tecnologias e ferramentas</h2>
+      <p class="skills-intro">Meu foco principal está em ecossistema .NET e desenvolvimento web, com domínio complementar de bancos de dados, cloud-ready tooling e práticas de qualidade.</p>
       <div id="skills-container" class="skills"></div>
     </section>
 
     <section id="contact" data-aos="fade-up">
-      <h3>Contato</h3>
-      <p>Gostaria de falar comigo?</p>
-      <p>📧 <a href="mailto:felipe.ranzoni@hotmail.com">felipe.ranzoni@hotmail.com</a></p>
-      <p>🔗 <a href="https://www.linkedin.com/in/felipe-ranzoni-borges-5357a890/">LinkedIn</a> | <a href="https://github.com/Ranzoni">GitHub</a></p>
+      <p class="section-kicker">Contato</p>
+      <h2>Vamos construir algo sólido juntos?</h2>
+      <p>Disponível para oportunidades CLT, consultoria e projetos freelance com foco em produtos web corporativos.</p>
+      <div class="contact-links">
+        <a class="btn btn-primary" href="mailto:felipe.ranzoni@hotmail.com">Enviar e-mail</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/felipe-ranzoni-borges-5357a890/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/Ranzoni" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </section>
 
     <footer>
-      <p>&copy; 2025 Felipe Ranzoni Borges. Todos os direitos reservados.</p>
+      <p>&copy; 2026 Felipe Ranzoni Borges. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+      AOS.init({
+        duration: 700,
+        once: true,
+        easing: 'ease-out-cubic'
+      })
+    </script>
 
     <script src="scripts/portfolio.js"></script>
     <script src="scripts/skills.js"></script>

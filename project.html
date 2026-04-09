@@ -4,39 +4,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Portfólio | Felipe Borges</title>
+    <title>Projetos | Felipe Borges</title>
     
     <link rel="shortcut icon" type="image/x-icon" href="img/code.png" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/portfolio.css" />
   </head>
 
   <body>
-    
-    <script>
-      AOS.init()
-    </script>
-
     <div class="background-div"></div>
+    <div class="background-noise"></div>
     
     <nav>
+      <a class="brand" href="index.html#about">Felipe Borges</a>
       <ul>
-        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html#about">Sobre</a></li>
+        <li><a href="index.html#portfolio">Portfólio</a></li>
+        <li><a href="index.html#contact">Contato</a></li>
       </ul>
+      <a class="nav-cta" href="index.html#contact">Vamos conversar</a>
     </nav>
     
-    <header>
-      <h2>Desenvolvedor de Software</h2>
+    <header data-aos="fade-up">
+      <p class="hero-kicker">Portfólio detalhado</p>
+      <h1>Cases completos serão publicados em breve.</h1>
+      <p class="hero-lead">Enquanto isso, você pode conhecer meus destaques técnicos e histórico profissional na página principal.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="index.html#portfolio">Voltar para projetos</a>
+        <a class="btn btn-ghost" href="index.html#contact">Entrar em contato</a>
+      </div>
     </header>
+
+    <script>
+      AOS.init({
+        duration: 700,
+        once: true,
+        easing: 'ease-out-cubic'
+      })
+    </script>
     
     <footer>
-      <p>&copy; 2025 Felipe Ranzoni Borges. Todos os direitos reservados.</p>
+      <p>&copy; 2026 Felipe Ranzoni Borges. Todos os direitos reservados.</p>
     </footer>
   </body>
 </html>
