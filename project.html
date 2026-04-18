@@ -35,14 +35,86 @@
     </nav>
     
     <header data-aos="fade-up">
-      <p class="hero-kicker">Portfólio detalhado</p>
-      <h1>Cases completos serão publicados em breve.</h1>
-      <p class="hero-lead">Enquanto isso, você pode conhecer meus destaques técnicos e histórico profissional na página principal.</p>
+      <p class="hero-kicker">Case profissional</p>
+      <h1 id="bertoli-hub">Bertoli HUB - Produto Digital de Curso de Turismo Privativo</h1>
+      <p class="hero-lead">Plataforma online proprietária da Bertoli Tours para centralizar e distribuir conteúdos educacionais com autonomia total de gestão, controle de acesso e evolução contínua do produto.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="index.html#portfolio">Voltar para projetos</a>
-        <a class="btn btn-ghost" href="index.html#contact">Entrar em contato</a>
+        <a class="btn btn-primary" href="index.html#portfolio">Voltar para portfólio</a>
+        <a class="btn btn-ghost" href="index.html#contact">Falar sobre um projeto</a>
       </div>
     </header>
+
+    <section data-aos="fade-up" class="project-case">
+      <div class="project-hero-image">
+        <img src="img/portfolio/bertoli-hub.png" alt="Tela da plataforma Bertoli HUB" />
+      </div>
+
+      <div class="project-content-block">
+        <p>O Bertoli HUB surgiu da necessidade de oferecer uma solução própria, sem dependência de plataformas externas, garantindo controle total sobre usuários, conteúdos e regras de acesso.</p>
+        <p>Desenvolvi a aplicação de ponta a ponta como fullstack, sendo responsável pela arquitetura do sistema, implementação das funcionalidades e configuração da infraestrutura de deploy.</p>
+        <p>A plataforma permite autenticação de usuários e controle de acesso baseado em planos (HUB com acesso geral ou por módulos específicos), além de oferecer uma experiência contínua de aprendizado com dashboard personalizado, retomada de conteúdo e integração com player de vídeo via Vimeo.</p>
+        <p>Também foi implementada uma área administrativa exclusiva, permitindo ao cliente gerenciar toda a plataforma de forma autônoma, incluindo cursos, módulos, aulas, usuários, professores, notícias e ajustes básicos de layout.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-panel">
+          <h2>Arquitetura e tecnologias</h2>
+          <ul>
+            <li>Back-end em .NET (API REST), containerizado com Docker.</li>
+            <li>Banco de dados PostgreSQL com migrações via Entity Framework.</li>
+            <li>Front-end em React.js (HTML e CSS).</li>
+            <li>Infraestrutura em servidor Ubuntu (Droplet).</li>
+            <li>Nginx como servidor web e proxy reverso.</li>
+            <li>Deploy automatizado com scripts shell (.sh).</li>
+          </ul>
+        </article>
+
+        <article class="project-panel">
+          <h2>Funcionalidades</h2>
+          <ul>
+            <li>Sistema de autenticação e gerenciamento de usuários.</li>
+            <li>Controle de acesso por planos e módulos.</li>
+            <li>Dashboard com progresso e continuidade de aulas.</li>
+            <li>Integração com player de vídeo (Vimeo via iframe).</li>
+            <li>Modo claro e escuro.</li>
+            <li>Sistema de notícias.</li>
+            <li>Área administrativa completa (CMS próprio).</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section data-aos="fade-up" class="project-case">
+      <h2>Decisões técnicas</h2>
+      <div class="project-content-block">
+        <p>A arquitetura foi planejada para garantir escalabilidade e manutenção simplificada: utilização de API REST em .NET para estrutura robusta e performática, containerização com Docker para padronização de ambiente, separação entre front-end e back-end para evolução independente, Nginx como proxy reverso para melhor gerenciamento de requisições e deploy automatizado para mais agilidade e confiabilidade nas atualizações.</p>
+      </div>
+
+      <h2>Resultado</h2>
+      <div class="project-content-block">
+        <p>O projeto foi entregue como uma solução completa e funcional, permitindo ao cliente total autonomia na gestão de conteúdos e usuários, sem dependência técnica para operação da plataforma.</p>
+      </div>
+    </section>
+
+    <section data-aos="fade-up" class="project-case">
+      <h2>Demonstrações em vídeo</h2>
+      <div class="video-grid">
+        <article class="project-panel video-panel">
+          <h3>Portal</h3>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/51_JmfkTmvQ" title="Demonstração do Portal Bertoli HUB" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+          </div>
+        </article>
+
+        <article class="project-panel video-panel">
+          <h3>Portal em mobiles</h3>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/o2iB9YejohI" title="Demonstração do Portal Bertoli HUB em dispositivos móveis" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </article>
+      </div>
+    </section>
 
     <script>
       AOS.init({

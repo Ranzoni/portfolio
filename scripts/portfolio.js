@@ -1,6 +1,13 @@
 const projects = [
     {
         category: 'business',
+        img: 'img/portfolio/bertoli-hub.png',
+        name: 'Bertoli HUB',
+        description: 'Produto digital proprietário para cursos de turismo privativo com gestão completa de conteúdo e usuários.',
+        link: 'project.html#bertoli-hub'
+    },
+    {
+        category: 'business',
         img: 'img/portfolio/2fa.png',
         name: 'Autenticacao em Dois Fatores',
         description: 'Projeto com fluxo de autenticacao em dois fatores via email e aplicativos autenticadores.',
@@ -48,10 +55,12 @@ function renderProjects(category, containerId) {
             cardDescription.textContent = project.description
 
             const cardLink = document.createElement('a')
-            cardLink.textContent = 'Ver case'
+            cardLink.textContent = 'Ver mais'
             cardLink.href = project.link
-            cardLink.target = '_blank'
-            cardLink.rel = 'noopener noreferrer'
+            if (/^https?:\/\//i.test(project.link)) {
+                cardLink.target = '_blank'
+                cardLink.rel = 'noopener noreferrer'
+            }
 
             const cardDiv = document.createElement('div')
             cardDiv.classList.add('card')

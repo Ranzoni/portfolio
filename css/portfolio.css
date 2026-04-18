@@ -63,3 +63,85 @@
 .card a:hover {
     color: #5fd0c0;
 }
+
+.project-case {
+    display: grid;
+    gap: 24px;
+}
+
+.project-hero-image img {
+    width: 100%;
+    border-radius: 18px;
+    border: 1px solid var(--line);
+    box-shadow: var(--card-shadow);
+}
+
+.project-content-block {
+    padding: 22px;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    background-color: var(--surface-soft);
+}
+
+.project-content-block p + p {
+    margin-top: 12px;
+}
+
+.project-grid,
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.project-panel {
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: var(--card-shadow);
+    color: var(--text-100);
+    border: 1px solid var(--line);
+    background-color: var(--surface-soft);
+}
+
+.project-panel h2,
+.project-panel h3 {
+    margin-bottom: 10px;
+}
+
+.project-panel ul {
+    margin-left: 18px;
+    color: var(--text-200);
+}
+
+.project-panel li + li {
+    margin-top: 8px;
+}
+
+.video-panel {
+    padding-bottom: 18px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (max-width: 900px) {
+    .project-grid,
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
