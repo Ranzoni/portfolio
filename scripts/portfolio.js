@@ -1,20 +1,20 @@
 const projects = [
     {
-        category: 'business',
+        category: 'professional',
         img: 'img/portfolio/bertoli-hub.png',
         name: 'Bertoli HUB',
         description: 'Produto digital proprietário para cursos de turismo privativo com gestão completa de conteúdo e usuários.',
         link: 'bertoli-hub.html#bertoli-hub'
     },
     {
-        category: 'business',
+        category: 'technical',
         img: 'img/portfolio/2fa.png',
-        name: 'Autenticacao em Dois Fatores',
+        name: 'Autenticação em Dois Fatores',
         description: 'Projeto com fluxo de autenticacao em dois fatores via email e aplicativos autenticadores.',
         link: 'https://www.linkedin.com/posts/felipe-ranzoni-borges-5357a890_continuando-na-constru%C3%A7%C3%A3o-de-um-portf%C3%B3lio-activity-7346154642331832320-Bics?utm_source=share&utm_medium=member_desktop&rcm=ACoAABNWtvkBwGZzpHIYSU2Vog1ovikaj2vyhBA'
     },
     {
-        category: 'business',
+        category: 'technical',
         img: 'img/portfolio/messenger.jpg',
         name: 'The Messenger',
         description: 'Pacote publicado no NuGet para enfileiramento de mensagens com suporte de retorno para controllers.',
@@ -76,5 +76,6 @@ function renderProjects(category, containerId) {
         })
 }
 
-renderProjects('business', 'cards-business')
+renderProjects('professional', 'cards-professional')
+renderProjects('technical', 'cards-technical')
 renderProjects('games', 'cards-games')
