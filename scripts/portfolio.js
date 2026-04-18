@@ -47,6 +47,9 @@ function renderProjects(category, containerId) {
             const cardImg = document.createElement('img')
             cardImg.src = project.img
             cardImg.alt = project.name
+            if (project.img.indexOf('bertoli-hub.png') !== -1) {
+                cardImg.classList.add('card-image-wide')
+            }
 
             const cardLabel = document.createElement('h4')
             cardLabel.textContent = project.name
