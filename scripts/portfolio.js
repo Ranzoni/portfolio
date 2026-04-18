@@ -4,7 +4,7 @@ const projects = [
         img: 'img/portfolio/bertoli-hub.png',
         name: 'Bertoli HUB',
         description: 'Produto digital proprietário para cursos de turismo privativo com gestão completa de conteúdo e usuários.',
-        link: 'project.html#bertoli-hub'
+        link: 'bertoli-hub.html#bertoli-hub'
     },
     {
         category: 'business',

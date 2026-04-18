@@ -87,6 +87,103 @@
     background: linear-gradient(135deg, rgba(37, 82, 112, 0.95), rgba(24, 60, 86, 0.94));
 }
 
+.project-hero-image-bertoli {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.image-carousel {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-image-button {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 18px;
+    background: transparent;
+    cursor: zoom-in;
+}
+
+.carousel-image-button img {
+    max-height: 540px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background: rgba(6, 16, 28, 0.65);
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-control:hover {
+    background: rgba(10, 28, 46, 0.9);
+    transform: translateY(-50%) scale(1.03);
+}
+
+.carousel-control-prev {
+    left: 14px;
+}
+
+.carousel-control-next {
+    right: 14px;
+}
+
+.carousel-caption {
+    margin-top: 10px;
+    text-align: center;
+    color: var(--text-300);
+    font-size: 0.95rem;
+}
+
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+    background: rgba(4, 10, 18, 0.88);
+    z-index: 1000;
+}
+
+.image-lightbox.active {
+    display: flex;
+}
+
+.image-lightbox img {
+    width: min(1200px, 96vw);
+    max-height: 92vh;
+    object-fit: contain;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 26px 58px rgba(0, 0, 0, 0.4);
+    background: #0d2337;
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 16px;
+    right: 22px;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 2.4rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
 .project-content-block {
     padding: 22px;
     border-radius: 16px;
@@ -154,5 +251,35 @@
     .project-grid,
     .video-grid {
         grid-template-columns: 1fr;
+    }
+
+    .carousel-image-button img {
+        max-height: 420px;
+    }
+}
+
+@media (max-width: 560px) {
+    .carousel-control {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+    }
+
+    .carousel-control-prev {
+        left: 8px;
+    }
+
+    .carousel-control-next {
+        right: 8px;
+    }
+
+    .image-lightbox {
+        padding: 18px 12px;
+    }
+
+    .lightbox-close {
+        top: 10px;
+        right: 12px;
+        font-size: 2rem;
     }
 }

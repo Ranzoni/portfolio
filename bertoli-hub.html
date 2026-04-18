@@ -46,7 +46,14 @@
 
     <section data-aos="fade-up" class="project-case">
       <div class="project-hero-image project-hero-image-bertoli">
-        <img src="img/portfolio/bertoli-hub.png" alt="Tela da plataforma Bertoli HUB" />
+        <div class="image-carousel" aria-label="Carrossel de telas da plataforma Bertoli HUB">
+          <button class="carousel-control carousel-control-prev" type="button" aria-label="Imagem anterior">&#10094;</button>
+          <button class="carousel-image-button" type="button" aria-label="Ampliar imagem atual">
+            <img id="bertoli-carousel-image" src="img/portfolio/bertoli-hub/1-dashboard.jpg" alt="Bertoli HUB - Tela 1" />
+          </button>
+          <button class="carousel-control carousel-control-next" type="button" aria-label="Próxima imagem">&#10095;</button>
+          <p class="carousel-caption" id="bertoli-carousel-caption">1 / 11 • dashboard</p>
+        </div>
       </div>
 
       <div class="project-content-block">
@@ -116,7 +123,94 @@
       </div>
     </section>
 
+    <div class="image-lightbox" id="bertoli-lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="Fechar visualização ampliada">&times;</button>
+      <img id="bertoli-lightbox-image" src="" alt="Visualização ampliada da tela do Bertoli HUB" />
+    </div>
+
     <script>
+      const bertoliCarouselImages = [
+        '1-dashboard.jpg',
+        '2-menu.jpg',
+        '3-aulas.jpg',
+        '4-aula.jpg',
+        '5-notícias.jpg',
+        '6-notícia.jpg',
+        '7-materiais.jpg',
+        '8-material.jpg',
+        '9-comunidade.jpg',
+        '10-escuro.jpg',
+        '11-admin.jpg'
+      ]
+
+      const carouselImage = document.getElementById('bertoli-carousel-image')
+      const carouselCaption = document.getElementById('bertoli-carousel-caption')
+      const carouselPrev = document.querySelector('.carousel-control-prev')
+      const carouselNext = document.querySelector('.carousel-control-next')
+      const carouselImageButton = document.querySelector('.carousel-image-button')
+      const lightbox = document.getElementById('bertoli-lightbox')
+      const lightboxImage = document.getElementById('bertoli-lightbox-image')
+      const lightboxClose = document.querySelector('.lightbox-close')
+
+      let currentImageIndex = 0
+
+      function formatImageLabel(fileName) {
+        return fileName.replace(/^\d+-/, '').replace('.jpg', '')
+      }
+
+      function updateCarouselImage() {
+        const fileName = bertoliCarouselImages[currentImageIndex]
+        const src = `img/portfolio/bertoli-hub/${encodeURIComponent(fileName)}`
+        const imageNumber = currentImageIndex + 1
+        const imageLabel = formatImageLabel(fileName)
+
+        carouselImage.src = src
+        carouselImage.alt = `Bertoli HUB - Tela ${imageNumber}: ${imageLabel}`
+        carouselCaption.textContent = `${imageNumber} / ${bertoliCarouselImages.length} • ${imageLabel}`
+      }
+
+      function showPreviousImage() {
+        currentImageIndex = (currentImageIndex - 1 + bertoliCarouselImages.length) % bertoliCarouselImages.length
+        updateCarouselImage()
+      }
+
+      function showNextImage() {
+        currentImageIndex = (currentImageIndex + 1) % bertoliCarouselImages.length
+        updateCarouselImage()
+      }
+
+      function openLightbox() {
+        lightboxImage.src = carouselImage.src
+        lightboxImage.alt = carouselImage.alt
+        lightbox.classList.add('active')
+        lightbox.setAttribute('aria-hidden', 'false')
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('active')
+        lightbox.setAttribute('aria-hidden', 'true')
+        lightboxImage.src = ''
+      }
+
+      carouselPrev.addEventListener('click', showPreviousImage)
+      carouselNext.addEventListener('click', showNextImage)
+      carouselImageButton.addEventListener('click', openLightbox)
+      lightboxClose.addEventListener('click', closeLightbox)
+
+      lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) {
+          closeLightbox()
+        }
+      })
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') showPreviousImage()
+        if (event.key === 'ArrowRight') showNextImage()
+        if (event.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox()
+      })
+
+      updateCarouselImage()
+
       AOS.init({
         duration: 700,
         once: true,
